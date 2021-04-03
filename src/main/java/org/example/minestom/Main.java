@@ -14,6 +14,7 @@ import net.minestom.server.event.player.PlayerSkinInitEvent;
 import net.minestom.server.instance.InstanceContainer;
 import net.minestom.server.instance.InstanceManager;
 import net.minestom.server.utils.Position;
+import org.example.minestom.command.GamemodeCommand;
 import org.example.minestom.command.StopCommand;
 import org.example.minestom.generation.StoneFlatWorldgen;
 
@@ -31,6 +32,7 @@ public class Main {
         // Set Chunk Generator & Register Command
         instanceContainer.setChunkGenerator(new StoneFlatWorldgen());
         commandManager.register(new StopCommand());
+        commandManager.register(new GamemodeCommand());
 
         // Add Event at GlobalEventHandler
         globalEventHandler.addEventCallback(PlayerLoginEvent.class, event -> {
