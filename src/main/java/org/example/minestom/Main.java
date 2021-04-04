@@ -48,5 +48,7 @@ public class Main {
             PlayerSkin skin = PlayerSkin.fromUsername(player.getUsername()); // Get Skin From Mojang Server
             player.setSkin(skin);
         });
+
+        minecraftServer.start("0.0.0.0",25565);
     }
 }
